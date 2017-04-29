@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!DOCTYPE struts PUBLIC  
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"  
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	<package name="ssh" namespace="/" extends="struts-default">
+	
+		<!-- user -->
+		<action name="user_*"  method="{1}" class="userAction">
+			<result name="loginSuccess">/index.jsp</result>
+			<result name="loginError">/login.jsp</result>
+			<result name="findAllUsers">/views/user/userList.jsp</result>
+			<result name="jumpUserAdd">/views/user/userAdd.jsp</result>
+			<result type="redirectAction" name="saveUser">user_findAllUsers</result>
+			<result name="jumpUserUpdate">/views/user/userUpdate.jsp</result>
+			<result type="redirectAction" name="updateUser">user_findAllUsers</result>
+			<result type="redirectAction" name="deleteUser">user_findAllUsers</result>
+			<result name="exportUserExcel">/index.jsp</result>
+			<result type="redirectAction" name="exportUserExcel2">user_findAllUsers</result>
+		</action>
+		
+		<!-- teacher -->
+		<action name="teacher_*"  method="{1}" class="teacherAction">
+			<result name="findTeachers">/views/teacher/teacherList.jsp</result>
+		</action>
+		
+	</package>
+	
+	<package name="default" namespace="/" extends="struts-default">
+    <!-- 文件上传 -->
+        <action name="upload" class="com.ssh.action.UploadAction">
+        <!-- 配置fileUpload的拦截器 -->  
+        <interceptor-ref name="fileUpload">  
+           <!-- 配置允许上传的文件类型 -->  
+           <param name="allowedTypes">image/bmp,image/gif,image/jpg</param>      
+        
+           <!--配置允许上传文件的扩展名,如果有多个用","隔开 -->      
+           <param name="allowedExtensions">txt,excel,ppt</param>    
+                
+           <!-- 配置允许上传的文件大小,最大为20k -->  
+           <param name="maximumSize">20480</param>  
+        </interceptor-ref>  
+        <!-- 配置struts2的默认拦截器栈  -->  
+        <interceptor-ref name="defaultStack"></interceptor-ref>  
+        </action>
+        
+    </package>
+</struts>   
