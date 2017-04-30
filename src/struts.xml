@@ -23,6 +23,7 @@
 		<!-- teacher -->
 		<action name="teacher_*"  method="{1}" class="teacherAction">
 			<result name="findTeachers">/views/teacher/teacherList.jsp</result>
+			<result name="saveTeacher">/views/teacher/teacherList.jsp</result>
 		</action>
 		
 	</package>
