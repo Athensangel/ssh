@@ -71,13 +71,14 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <div class="panel admin-panel margin-top">
   <div class="panel-head" id="add"><strong><span class="icon-pencil-square-o"></span>增加内容</strong></div>
   <div class="body-content">
-    <form method="post" class="form-x" action="${pageContext.request.contextPath}/teacher_saveTeacher.action">   
+    <form method="post" class="form-x" action="${pageContext.request.contextPath}/teacher_updateTeacher.action">   
+     <input type="hidden" name="id" value="${currentTeacher.id }"/>
       <div class="form-group">
         <div class="label">
           <label>密碼：</label>
         </div>
         <div class="field">
-          <input type="text" class="input w50" name="password" value="" data-validate="required:请输入标题" />         
+          <input type="text" class="input w50" name="password" value="${currentTeacher.password}" data-validate="required:请输入标题" />         
           <div class="tips"></div>
         </div>
       </div> 
@@ -86,7 +87,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
           <label>账号：</label>
         </div>
         <div class="field">
-          <input type="text" class="input w50" name="name" value="" data-validate="required:请输入标题" />         
+          <input type="text" class="input w50" name="name" value="${currentTeacher.name}" data-validate="required:请输入标题" />         
           <div class="tips"></div>
         </div>
       </div> 
@@ -95,7 +96,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
           <label>性別：</label>
         </div>
         <div class="field">
-          <input type="text" class="input w50" name="sex" value="" data-validate="required:请输入标题" />         
+          <input type="text" class="input w50" name="sex" value="${currentTeacher.sex}" data-validate="required:请输入标题" />         
           <div class="tips"></div>
         </div>
       </div> 
@@ -104,7 +105,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
           <label>生日：</label>
         </div>
         <div class="field">
-          <input type="text" class="input w50" name="brithday" value="" data-validate="required:请输入标题" />         
+          <input type="text" class="input w50" name="brithday" value="${currentTeacher.brithday}" data-validate="required:请输入标题" />         
           <div class="tips"></div>
         </div>
       </div> 
@@ -113,7 +114,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
           <label>学院编号：</label>
         </div>
         <div class="field">
-          <input type="text" class="input w50" name="collegeid" value="" data-validate="required:请输入标题" />         
+          <input type="text" class="input w50" name="collegeid" value="${currentTeacher.collegeid}" data-validate="required:请输入标题" />         
           <div class="tips"></div>
         </div>
       </div> 
@@ -122,7 +123,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
           <label>工号：</label>
         </div>
         <div class="field">
-          <input type="text" class="input w50" name="post" value="" data-validate="required:请输入标题" />         
+          <input type="text" class="input w50" name="post" value="${currentTeacher.post}" data-validate="required:请输入标题" />         
           <div class="tips"></div>
         </div>
       </div> 
@@ -131,7 +132,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
           <label>所在省份：</label>
         </div>
         <div class="field">
-          <input type="text" class="input w50" name="province" value="" data-validate="required:请输入标题" />         
+          <input type="text" class="input w50" name="province" value="${currentTeacher.province}" data-validate="required:请输入标题" />         
           <div class="tips"></div>
         </div>
       </div> 
@@ -140,7 +141,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
           <label>所在城市：</label>
         </div>
         <div class="field">
-          <input type="text" class="input w50" name="city" value="" data-validate="required:请输入标题" />         
+          <input type="text" class="input w50" name="city" value="${currentTeacher.city}" data-validate="required:请输入标题" />         
           <div class="tips"></div>
         </div>
       </div> 
@@ -149,7 +150,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
           <label>联系方式：</label>
         </div>
         <div class="field">
-          <input type="text" class="input w50" name="phone" value="" data-validate="required:请输入标题" />         
+          <input type="text" class="input w50" name="phone" value="${currentTeacher.phone}" data-validate="required:请输入标题" />         
           <div class="tips"></div>
         </div>
       </div> 
@@ -158,7 +159,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
           <label>职称：</label>
         </div>
         <div class="field">
-          <input type="text" class="input w50" name="title" value="" data-validate="required:请输入标题" />         
+          <input type="text" class="input w50" name="title" value="${currentTeacher.title}" data-validate="required:请输入标题" />         
           <div class="tips"></div>
         </div>
       </div> 

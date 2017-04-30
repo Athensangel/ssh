@@ -24,7 +24,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <div class="padding border-bottom">
       <ul class="search">
         <li>
-          <a class="button border-main" href="${pageContext.request.contextPath}/user_jumpUserAdd.action"><span class="icon-edit"></span> 新增</a>
+          <a class="button border-main" href="${pageContext.request.contextPath}/teacher_jumpTeacherAdd.action"><span class="icon-edit"></span> 新增</a>
           <button type="button"  class="button border-green" id="checkall"><span class="icon-check"></span> 全选</button>
           <button type="submit" class="button border-red"><span class="icon-trash-o"></span> 批量删除</button>
           <a class="button border-main" href="${pageContext.request.contextPath}/user_exportUserExcel.action"><span class="icon-edit"></span>导出</a>
@@ -65,8 +65,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
           <td>${teacher.title}</td>
           <td>
           <div class="button-group"> 
-           <a class="button border-main" href="${pageContext.request.contextPath}/user_jumpUserUpdate.action?id=${user.id}"><span class="icon-edit"></span>修改</a> 
-           <a class="button border-red" href="${pageContext.request.contextPath}/user_deleteUser.action?id=${user.id}"><span class="icon-trash-o"></span>删除</a> 
+           <a class="button border-main" href="${pageContext.request.contextPath}/teacher_jumpTeacherUpdate.action?id=${teacher.id}"><span class="icon-edit"></span>修改</a> 
+           <a class="button border-red" href="${pageContext.request.contextPath}/teacher_deleteTeacher.action?id=${teacher.id}"><span class="icon-trash-o"></span>删除</a> 
           </div>
           </td>
         </tr>
