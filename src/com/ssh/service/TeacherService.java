@@ -21,5 +21,5 @@ public interface TeacherService {
 	public void deleteTeacher(Teacher teacher);// 查询所有的教师
 
 	public Teacher updateTeacherById(Teacher teacher);// 查询所有的教师
-
+	
 }

@@ -94,6 +94,14 @@
 		<property name="teaService" ref="teacherService"></property>
 	</bean>
 	
+	<bean name="studentsService" class="com.ssh.service.impl.StudentsServiceImpl">
+		<property name="sDao" ref="baseDao"></property>
+	</bean>
+	
+	<bean name="studentsAction" class="com.ssh.action.StudentsAction" scope="prototype">
+		<property name="studService" ref="studentsService"></property>
+	</bean>
+	
 	
 
 </beans>  

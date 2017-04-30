@@ -25,10 +25,19 @@
 			<result name="findTeachers">/views/teacher/teacherList.jsp</result>
 			<result type="redirect" name="saveTeacher">teacher_findAllTeachers.action</result>
 			<result name="jumpTeacherAdd">/views/teacher/teacherAdd.jsp</result>
-			<result type="redirectAction" name="saveUser">teacher_findAllTeacher</result>
 			<result name="jumpTeacherUpdate">/views/teacher/teacherUpdate.jsp</result>
 			<result type="redirectAction" name="updateTeacher">teacher_findAllTeachers</result>
 			<result type="redirectAction" name="deleteTeacher">teacher_findAllTeachers</result>
+		</action>
+		
+		<!-- students -->
+		<action name="students_*"  method="{1}" class="studentsAction">
+			<result name="findAllstudent">/views/students/studentsList.jsp</result>
+			<result type="redirectAction" name="saveStudent">students_findAllStudents</result>
+			<result name="jumpStudentsAdd">/views/students/studentsAdd.jsp</result>
+			<result name="jumpStudentsUpdate">/views/students/studentsUpdate.jsp</result>
+			<result type="redirectAction" name="updateStudents">students_findAllStudents</result>
+			<result type="redirectAction" name="deleteStudents">students_findAllStudents</result>
 		</action>
 		
 	</package>
