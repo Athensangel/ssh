@@ -40,6 +40,11 @@
 			<result type="redirectAction" name="deleteStudents">students_findAllStudents</result>
 		</action>
 		
+		<!-- Course -->
+		<action name="course_*"  method="{1}" class="courseAction">
+			<result name="coursePageList">/views/course/courseList.jsp</result>
+		</action>
+		
 	</package>
 	
 	<package name="default" namespace="/" extends="struts-default">

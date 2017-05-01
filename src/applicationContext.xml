@@ -69,15 +69,12 @@
 		<aop:advisor advice-ref="txAdvice" pointcut-ref="serviceOperation" />
 	</aop:config>
 
-	<!-- user -->
-	<!-- <bean name="userDao" class="com.ssh.biz.impl.UserDaoImpl">
-		<property name="sessionFactory" ref="sessionFactory"></property>
-	</bean> -->
 	
 	<bean name="baseDao" class="com.ssh.biz.impl.BaseDaoImpl">
 		<property name="sessionFactory" ref="sessionFactory"></property>
 	</bean>
 	
+	<!-- User -->
 	<bean name="userService" class="com.ssh.service.impl.UserServiceImpl">
 		<property name="bDao" ref="baseDao"></property>
 	</bean>
@@ -86,6 +83,7 @@
 		<property name="uService" ref="userService"></property>
 	</bean>
 	
+	<!-- Teacher -->
 	<bean name="teacherService" class="com.ssh.service.impl.TeacherServiceImpl">
 		<property name="bDao" ref="baseDao"></property>
 	</bean>
@@ -94,6 +92,7 @@
 		<property name="teaService" ref="teacherService"></property>
 	</bean>
 	
+	<!-- Students -->
 	<bean name="studentsService" class="com.ssh.service.impl.StudentsServiceImpl">
 		<property name="sDao" ref="baseDao"></property>
 	</bean>
@@ -102,6 +101,17 @@
 		<property name="studService" ref="studentsService"></property>
 	</bean>
 	
+	<!-- Course -->
+	<bean name="courseDao" class="com.ssh.biz.impl.CourseDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
 	
+	<bean name="courseService" class="com.ssh.service.impl.CourseServiceImpl">
+		<property name="courseDao" ref="courseDao"></property>
+	</bean>
+	
+	<bean name="courseAction" class="com.ssh.action.CourseAction" scope="prototype">
+		<property name="courseService" ref="courseService"></property>
+	</bean>
 
 </beans>  

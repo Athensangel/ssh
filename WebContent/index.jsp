@@ -28,8 +28,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <ul style="display:block">
     <li><a href="${pageContext.request.contextPath}/user_findAllUsers.action" target="right"><span class="icon-caret-right"></span>用户管理</a></li>
     <li><a href="${pageContext.request.contextPath}/teacher_findAllTeachers.action" target="right"><span class="icon-caret-right"></span>教師管理</a></li>
-    <li><a href="${pageContext.request.contextPath}/students_findAllStudents.action"" target="right"><span class="icon-caret-right"></span>学生管理</a></li>  
-    <li><a href="adv.html" target="right"><span class="icon-caret-right"></span>首页轮播</a></li>   
+    <li><a href="${pageContext.request.contextPath}/students_findAllStudents.action" target="right"><span class="icon-caret-right"></span>学生管理</a></li>  
+    <li><a href="${pageContext.request.contextPath}/course_getCoursePageList.action" target="right"><span class="icon-caret-right"></span>课程管理</a></li>   
     <li><a href="book.html" target="right"><span class="icon-caret-right"></span>留言管理</a></li>     
     <li><a href="column.html" target="right"><span class="icon-caret-right"></span>栏目管理</a></li>
   </ul>   
