@@ -19,5 +19,6 @@
   		<mapping resource="com/ssh/entity/Teacher.hbm.xml" /> 
   		<mapping resource="com/ssh/entity/Students.hbm.xml" /> 
   		<mapping resource="com/ssh/entity/Course.xml" /> 
+  		<mapping resource="com/ssh/entity/Score.xml" /> 
     </session-factory>  
 </hibernate-configuration>

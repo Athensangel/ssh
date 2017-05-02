@@ -31,7 +31,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <li><a href="${pageContext.request.contextPath}/students_findAllStudents.action" target="right"><span class="icon-caret-right"></span>学生管理</a></li>  
     <li><a href="${pageContext.request.contextPath}/course_getCoursePageList.action" target="right"><span class="icon-caret-right"></span>课程管理</a></li>   
     <li><a href="book.html" target="right"><span class="icon-caret-right"></span>留言管理</a></li>     
-    <li><a href="column.html" target="right"><span class="icon-caret-right"></span>栏目管理</a></li>
+    <li><a href="${pageContext.request.contextPath}/score_findAllScores.action" target="right"><span class="icon-caret-right"></span>分数管理</a></li>
   </ul>   
   <h2><span class="icon-pencil-square-o"></span>栏目管理</h2>
   <ul>

@@ -33,9 +33,9 @@
 		<!-- students -->
 		<action name="students_*"  method="{1}" class="studentsAction">
 			<result name="findAllstudent">/views/students/studentsList.jsp</result>
-			<result type="redirectAction" name="saveStudent">students_findAllStudents</result>
 			<result name="jumpStudentsAdd">/views/students/studentsAdd.jsp</result>
 			<result name="jumpStudentsUpdate">/views/students/studentsUpdate.jsp</result>
+			<result type="redirectAction" name="saveStudent">students_findAllStudents</result>
 			<result type="redirectAction" name="updateStudents">students_findAllStudents</result>
 			<result type="redirectAction" name="deleteStudents">students_findAllStudents</result>
 		</action>
@@ -43,6 +43,19 @@
 		<!-- Course -->
 		<action name="course_*"  method="{1}" class="courseAction">
 			<result name="coursePageList">/views/course/courseList.jsp</result>
+			<result type="redirectAction" name="deleteStudents">students_findAllStudents</result>
+		</action>
+		
+		<!-- Score -->
+		<action name="score_*"  method="{1}" class="scoreAction">
+		    <!--  name是返回值   跳转到那里 -->
+			<result name="scoresList">/views/score/scoreList.jsp</result>
+			<result name="jumpScoreAdd">/views/score/scoreAdd.jsp</result>
+			<result name="jumpScoreUpdate">/views/score/scoreUpdate.jsp</result>
+			 <!-- name是方法  跳转到那里加方法名 -->
+			<result type="redirectAction" name="deleteScore">score_findAllScores</result> 
+			<result type="redirectAction" name="saveScore">score_findAllScores</result> 
+			<result type="redirectAction" name="updateScore">score_findAllScores</result> 
 		</action>
 		
 	</package>

@@ -113,5 +113,15 @@
 	<bean name="courseAction" class="com.ssh.action.CourseAction" scope="prototype">
 		<property name="courseService" ref="courseService"></property>
 	</bean>
+	
+	<!-- Score -->
+	<bean name="scoreService" class="com.ssh.service.impl.ScoreServiceImpl">
+		<property name="oDao" ref="baseDao"></property>
+	</bean>
+	
+	<bean name="scoreAction" class="com.ssh.action.ScoreAction" scope="prototype">
+		<property name="scoreService" ref="scoreService"></property>
+	</bean>
+	
 
 </beans>  
